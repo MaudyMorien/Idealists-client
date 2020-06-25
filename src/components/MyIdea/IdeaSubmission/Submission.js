@@ -70,7 +70,7 @@ const Submission = (props) => {
     }
   };
 
-  if (localStorage.currentUserJwt !== null && props.authState.loggedIn === false) {
+  if (localStorage.currentUserJwt !== "" && props.authState.loggedIn === false) {
     props.setAuthLoggedInTrue()
     return <div></div>;
   }

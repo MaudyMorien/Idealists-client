@@ -28,16 +28,17 @@ export default function InvestorLogin(props) {
 
   const triggerUserData = () => {
     if (props.authState.loggedIn) {
-      props.user();
+      // props.user();
     }
   }
 
-  if (!localStorage.currentUserJwt) {
-    props.history.replace('/InvestorStart');
-    triggerUserData();
-    return <div></div>;
-  }
-
+  // if (!props.authState.loggedIn) {
+  //   props.history.replace('/InvestorStart');
+  //   triggerUserData();
+  //   return <div></div>;
+  // }
+  // HERE IS THE BUG IN THE ELSE RETURN on 65
+  console.log(props)
   if (props.authState.loggedIn !== true) return (
     <Container>
       <LeftSide>

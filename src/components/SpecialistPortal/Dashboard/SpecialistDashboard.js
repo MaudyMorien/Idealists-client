@@ -15,6 +15,7 @@ export default function specialistDashboard(props) {
   const [userLoggedIn, setUserLoggedIn] = useState(true);
 
   useEffect(() => {
+
     if (props.authState.loggedIn)
       request
         .get(`${baseUrl}/current`)

@@ -17,7 +17,7 @@ const InvestorStart = (props) => {
 
 
   const newUser = () => {
-    if (props.authState.loggedIn) {
+    if (localStorage.getItem("currentUserJwt")) {
       props.history.push('/Investors/dashboard');
     } else {
       setUiState('displayingLogin');
@@ -25,6 +25,8 @@ const InvestorStart = (props) => {
   };
 
   const existingUser = () => {
+    // if (!props.authState.loggedIn)
+    // setUiState('displayingLogin');
     props.history.push('/Investors/login');
   };
 
@@ -33,6 +35,9 @@ const InvestorStart = (props) => {
   };
 
   useEffect(() => {
+   if (localStorage.getItem("currentUserJwt")) {
+    props.history.push('/Investors/dashboard');
+   }
     if (emailAddress.length > 6 && password.length > 6) {
       setLoginButtonEnabled(true);
       setSignUpFormValidated(true);

@@ -17,7 +17,7 @@ const SpecialistStart = (props) => {
 
 
   const newUser = () => {
-    if (props.authState.loggedIn) {
+    if (localStorage.getItem("currentUserJwt")) {
       props.history.push('/Specialist/dashboard');
     } else {
       setUiState('displayingLogin');
@@ -33,6 +33,9 @@ const SpecialistStart = (props) => {
   };
 
   useEffect(() => {
+    if (localStorage.getItem("currentUserJwt")) {
+      props.history.push('/Specialist/dashboard');
+    }
     if (emailAddress.length > 6 && password.length > 6) {
       setLoginButtonEnabled(true);
       setSignUpFormValidated(true);

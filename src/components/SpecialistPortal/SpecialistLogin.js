@@ -28,15 +28,15 @@ export default function InvestorLogin(props) {
 
   const triggerUserData = () => {
     if (props.authState.loggedIn) {
-      props.user();
+      // props.user();
     }
   }
 
-  if (!localStorage.currentUserJwt) {
-    props.history.replace('/SpecialistStart');
-    triggerUserData();
-    return <div></div>;
-  }
+  // if (!localStorage.currentUserJwt) {
+  //   props.history.replace('/SpecialistStart');
+  //   triggerUserData();
+  //   return <div></div>;
+  // }
 
   if (props.authState.loggedIn !== true) return (
     <Container>
