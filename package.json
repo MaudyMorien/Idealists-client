@@ -17,7 +17,7 @@
     "country-json": "^1.1.0",
     "emotion-theming": "^10.0.27",
     "history": "^5.0.0",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "local-storage": "^1.4.2",
     "material-ui": "^0.20.2",
     "material-ui-icons": "^1.0.0-beta.36",
